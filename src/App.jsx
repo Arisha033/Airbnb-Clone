@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Nav } from './assets/components/Nav'
 import { Hero } from './assets/components/Hero'
 import { Card } from './assets/components/Card'
-import {data} from './assets/components/Data'
+import data from './Data'
 
 function App() {
 
