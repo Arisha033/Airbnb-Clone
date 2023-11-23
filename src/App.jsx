@@ -1,27 +1,27 @@
 import { useState } from 'react'
-import { Nav } from './assets/components/Nav'
-import { Hero } from './assets/components/Hero'
-import { Card } from './assets/components/Card'
+import { Nav }  from './assets/components/Nav'
+import { Hero }  from './assets/components/Hero'
+import { Card }  from './assets/components/Card'
 import data from './Data'
 
 function App() {
 
 const cards = data.map ( (item) => {
+ // console.log(item)
   return <Card
-          img={item.coverImg}
-          rating={item.stats.rating}
-          reviewCount={item.stats.reviewCount}
-          location={item.location}
-          title={item.title}
-          price={item.price}
-          
+          key={item.id}
+          // item={item}
+          {...item}
   />
 })
+
   return (
     <>
     <Nav/>
     <Hero/>
-    {cards}
+    <section className="cards-list">
+      {cards}
+    </section>
     </>
   )
 }
